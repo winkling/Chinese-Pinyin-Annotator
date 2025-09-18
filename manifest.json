@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Chinese Pinyin Annotator",
+  "version": "1.0",
+  "description": "Automatically adds Pinyin annotations to Chinese characters on webpages",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["pinyin-data.js", "content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
